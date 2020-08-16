@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-# 16x16 sudoku solver - assumes tokens 1-9, A-G
+# 16x16 sudoku solver - assumes the 16 tokens are [1-9] and [A-G]
+# This sudoku solver absolutely sucks and needs to be rethought
 
 #index ranges for rows/columns. this gets used a lot, easier to type
 $PUZZLE_RANGE = (0..15).to_a
