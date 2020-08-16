@@ -1,5 +1,5 @@
 # Sudoku
-Messing around with Ruby.  These are sudoku solvers that run on a command line interface, working on an input string of space-separated characters representing the puzzle, where a period represents a blank square 
+Messing around with Ruby.  These are sudoku solvers that run on a command line interface, working on an input string of space-separated characters representing the puzzle.  Blank spaces in the puzzle are represented by a period.
 
 CLI Usage: ./sudoku.rb puzzle  
   
