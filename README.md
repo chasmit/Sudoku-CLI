@@ -3,8 +3,8 @@ Messing around with Ruby.  These are sudoku solvers that run on a command line i
 
 The solution is printed in a more accessible ASCII representation of a sudoku puzzle.
 
-CLI Usage: ./sudoku.rb string  e
-  
+CLI Usage: ./sudoku.rb string
+ 
 I might make a friendlier interface one day if I feel like it.
 
 sudoku.rb: 3x3 sudoku solver. Supports puzzles with character ranges [1-9], [a-i], and [A-I].
