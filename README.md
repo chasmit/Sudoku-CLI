@@ -7,4 +7,4 @@ I might make a friendlier interface one day if I feel like it.
 
 sudoku.rb: 3x3 sudoku solver. Supports puzzles with character ranges [1-9], [a-i], and [A-I].
 
-sudoku_remix.rb: 4x4 sudoku solver.  Still very flawed because I'm a stupid idiot.
+sudoku_remix.rb: 4x4 sudoku solver.  This one is presently very flawed because I'm a stupid idiot.
