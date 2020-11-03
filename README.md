@@ -9,4 +9,4 @@ I might make a friendlier interface one day if I feel like it.
 
 sudoku.rb: standard 9x9 sudoku solver. Supports puzzles with character ranges [1-9], [a-i], and [A-I].
 
-sudoku_remix.rb: 16x16 sudoku solver.  This one is presently very flawed because I am a fat stupid idiot.
+sudoku_remix.rb: 16x16 sudoku solver.  This one is highly flawed in its present state because I am a stupid idiot.
