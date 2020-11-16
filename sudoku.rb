@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-#index ranges for rows/columns. this gets used a lot, easier to type
+#index ranges for rows/columns. 
 $PUZZLE_RANGE = (0..8).to_a
 $TYPE = 0
 
@@ -9,7 +9,7 @@ def readPuzzle(file)
     grid = Array.new(9) { Array.new(9) }
     input = Array.new
 
-    f = File.read(file).split
+    f = File.read(file).split("")
     f.each do |a|
         if a.match(/\./)
             input << "."
@@ -122,4 +122,3 @@ prettyPrint(grid)
 print "\nSolving puzzle...\n\n"
 solution = solve(grid)
 prettyPrint(solution)
-
