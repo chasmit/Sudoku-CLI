@@ -2,6 +2,8 @@
 
 #index ranges for rows/columns. 
 $PUZZLE_RANGE = (0..8).to_a
+
+#puzzle type accomodates for different potential charsets
 $TYPE = 0
 
 #reads input file of unsolved sudoku puzzle, saves in 2D array of integers, denotes blank cells as 0
@@ -33,16 +35,20 @@ def readPuzzle(file)
     return grid
 end
 
+def setTokens()
+    if $TYPE == 1
+        return (1..9).to_a
+    elsif $TYPE == 2
+        return ("A".."I").to_a
+    elsif $TYPE == 3
+        return ("a".."i").to_a
+    end
+end
+
 def possibleValues(grid, x, y) 
     boxVals = []
   
-    if $TYPE == 1
-        tokens = (1..9).to_a
-    elsif $TYPE == 2
-        tokens = ("A".."I").to_a
-    elsif $TYPE == 3
-        tokens = ("a".."i").to_a
-    end
+    tokens = setTokens()
 
     rowVals = 9.times.collect { |col| grid[x][col] }
     colVals = 9.times.collect { |row| grid[row][y] }
@@ -122,3 +128,4 @@ prettyPrint(grid)
 print "\nSolving puzzle...\n\n"
 solution = solve(grid)
 prettyPrint(solution)
+
