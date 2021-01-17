@@ -4,9 +4,9 @@
 $PUZZLE_RANGE = (0..8).to_a
 
 #puzzle type accomodates for different potential charsets
-$TYPE = 0
+$CHAR_TYPE = 0
 
-#reads input file of unsolved sudoku puzzle, saves in 2D array of integers, denotes blank cells as 0
+#reads input file of unsolved sudoku puzzle, saves in 2D array 
 def readPuzzle(file)
     grid = Array.new(9) { Array.new(9) }
     input = Array.new
@@ -17,13 +17,13 @@ def readPuzzle(file)
             input << "."
         elsif a.match(/\d/)
             input << a.to_i
-            $TYPE = 1
+            $CHAR_TYPE = 1
         elsif a.match(/[A-I]/)
             input << a
-            $TYPE = 2
+            $CHAR_TYPE = 2
         elsif a.match(/[a-i]/)
             input << a
-            $TYPE = 3
+            $CHAR_TYPE = 3
         end
     end
 
@@ -36,11 +36,11 @@ def readPuzzle(file)
 end
 
 def setTokens()
-    if $TYPE == 1
+    if $CHAR_TYPE == 1
         return (1..9).to_a
-    elsif $TYPE == 2
+    elsif $CHAR_TYPE == 2
         return ("A".."I").to_a
-    elsif $TYPE == 3
+    elsif $CHAR_TYPE == 3
         return ("a".."i").to_a
     end
 end
