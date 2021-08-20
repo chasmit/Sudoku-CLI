@@ -1,8 +1,6 @@
 # Sudoku
 Messing around with Ruby.  These are sudoku solvers that run on a command line interface, working on an input file of characters representing the puzzle.  Blank spaces in the puzzle are represented by a period. See sample file 'string'.  
 
-The solution is printed in a more accessible ASCII representation of a sudoku puzzle.
-
 CLI Usage: ./sudoku.rb <filename>
  
 I might make a friendlier interface one day.
