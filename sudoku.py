@@ -13,7 +13,7 @@ WIDTH = 9                       # width of grid
 def parse_puzzle(input):
     print("Reading puzzle...")
     char_type = 1
-    grid = [[0] * HEIGHT] * WIDTH
+    grid = [[0 for _ in range(HEIGHT)] for _ in range(WIDTH)]
     arr = []
 
     f = list(input)
@@ -80,7 +80,7 @@ def possible_values(char_type, grid, i, j):
 # i don't feel like explaining it in a comment
 def solve(char_type, grid):
     tokens = []
-    temp = [[0] * HEIGHT] * WIDTH
+    temp = [[0 for _ in range(HEIGHT)] for _ in range(WIDTH)] 
 
     for i in PUZZLE_RANGE:
         for j in PUZZLE_RANGE:
@@ -115,7 +115,7 @@ def pretty_print(grid):
     print(" ----------------------- ")
 
 
-# driving main function.  read puzzle, print, solve, print
+# read puzzle, print, solve, print
 def main():
     if len(sys.argv) == 1 or len(sys.argv[1]) != CELL_NUMBER:
         print("Error getting puzzle information")
